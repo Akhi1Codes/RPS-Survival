@@ -1,35 +1,30 @@
 let playes=['rock','paper','scissors'];
-let playerOutput = 'Rock';
+let playerOutput = 'paper';
 let playerSelection = playerOutput.toLowerCase();
 
 function computerPlay(){
- computerSelection = Math.floor(Math.random()*playes.length);
- console.log('computer selects '+playes[computerSelection])
+let computerPlay = Math.floor(Math.random()*playes.length);
+ computerSelection = (playes[computerPlay]);
+ console.log('computer selects '+computerSelection);
  console.log('player selects '+playerSelection);
 }
 
-function gamePlay(playerSelection,computerSelection){
-if (playerSelection === "rock") {
-    if (computerSelection === "scissors") {
-        console.log('You win');
-    } else {
-        console.log('computer wins')
+function gameRules(playerSelection,computerSelection){
+if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
+    (playerSelection == 'scissors' && computerSelection == 'paper') ||
+    (playerSelection == 'paper' && computerSelection == 'rock')) 
+    {
+        console.log('You win')
     }
-}
-if (playerSelection === "scissors") {
-    if (computerSelection === "paper") {
-        console.log('You win');
-    } else 
-        console.log('computer wins')
-}
-if (playerSelection === "paper") {
-    if (computerSelection === "rock") {
-        console.log('You win');
-    } else 
-        console.log('computer wins')
-}
+    else if(playerSelection === computerSelection){
+            console.log('tie')
+    }
+    else {
+        console.log('Computer wins')
+    }
+
 }
 
 
-computerPlay()
-gamePlay()
+computerPlay();
+gameRules(playerSelection,computerSelection);
