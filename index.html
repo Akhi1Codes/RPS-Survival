@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="script.js"></Script>
+    <link rel="stylesheet" href="styles.css"/>
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="upper_half">
+        <h1 class="main_text">STREET FIGHT</h1>
+        <h2 class="sub_text">>> Choose your <span class="red">weapon</span></h2>
+        <div class="weapons_layout">
+            <button id="rock" class="weapon">ROCK</button>
+            <button id="paper" class="weapon">PAPER</button>
+            <button id="scissors" class="weapon">SCISSORS</button>
+        </div>
+        </div>
+        <div class="lower_half">
+            <div class="flex-container">
+                <div class="health">
+                    <img src="assets/health.webp">
+                    <img src="assets/health.webp">
+                    <img src="assets/health.webp">
+                    <img src="assets/health.webp">
+                    <img src="assets/health.webp">
+                </div>
+                <div class="player_char">
+                    <h4 class="char_name">You</h4>
+                    <p class="char_name">^</p>
+                    <img src="assets/fighter2.gif" height="300px" width="200px">
+                </div>
+                <div class="player_selection">
+                    <h6 class="player_weapon weapon_selected">SCISSORS</h6>
+                </div>
+                <div class="results">
+                    <h6>VS</h6>
+                </div>
+                <div class="computer_selection">
+                    <h6 class="computer_weapon weapon_selected">SCISSORS</h6>
+                </div>
+                <div class="computer_char">
+                    <h4 class="char_name">Enemy</h4>
+                    <p class="char_name">^</p>
+                    <img src="assets/fighter1.gif" height="300px" width="200px">
+                </div>
+                <div class="health">
+                    <img src="assets/health.webp">
+                    <img src="assets/health.webp">
+                    <img src="assets/health.webp">
+                    <img src="assets/health.webp">
+                    <img src="assets/health.webp">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

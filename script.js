@@ -1,5 +1,5 @@
 let playes=['rock','paper','scissors'];
-let playerOutput = 'paper';
+let playerOutput = yeet;
 let playerSelection = playerOutput.toLowerCase();
 
 function computerPlay(){
