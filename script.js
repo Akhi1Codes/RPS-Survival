@@ -6,20 +6,29 @@ const scissorsbtn = document.getElementById('scissors');
 const playerweapon = document.getElementById('player1');
 const score = document.getElementById('mainresult');
 const wepnContr = document.getElementById('weapon_container');
+const startbtn = document.getElementById('start_button');
 const restartbtn = document.getElementById('restart_button');
 const finalresults = document.getElementById('subtext');
+const backmusic = new Audio('audio/backgroundmusic.mp3');
+const attack = new Audio('audio/attacks.mp3');
+const fight = new Audio('audio/Fight.mp3');
+const crowdapl = new Audio('audio/crowdapplause.mp3');
+const crowdboo = new Audio('audio/crowdboo.mp3');
 
 rockbtn.addEventListener( "click" ,function() {
     let result = computerPlay('rock');
     playerweapon.innerText = "rock"
+    attack.play()
 })
 paperbtn.addEventListener( "click" ,function() {
     let result = computerPlay('paper');
     playerweapon.innerText = "paper"
+    attack.play()
 })
 scissorsbtn.addEventListener( "click" ,function() {
     let result = computerPlay('scissors');
     playerweapon.innerText = "scissors"
+    attack.play()
 })
 
 function computerPlay(playerSelection){
@@ -118,11 +127,22 @@ function gameEnd(pscore,cscore){
     }
     if(pscore == 5){
         finalresults.innerText = "VICTORY"
+        crowdapl.play();
+        crowdapl.volume = 0.3;
     }
     if(cscore == 5){
         finalresults.innerText = "A Bitter defeat TRY AGAIN!!!"
+        crowdboo.play();
+        crowdboo.volume = 0.3;
     }
 }
  function gameRestart(){
     location.reload();
  }
+ function gameStart(){
+    wepnContr.style.display = "block"
+    startbtn.style.display = "none"
+    fight.play()
+ }
+ 
+ backmusic.play();
