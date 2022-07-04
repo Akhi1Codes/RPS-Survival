@@ -9,6 +9,9 @@ const wepnContr = document.getElementById('weapon_container');
 const startbtn = document.getElementById('start_button');
 const restartbtn = document.getElementById('restart_button');
 const finalresults = document.getElementById('subtext');
+
+// Audio variables
+
 const backmusic = new Audio('audio/backgroundmusic.mp3');
 const attack = new Audio('audio/attacks.mp3');
 const lefthook = new Audio('audio/LeftHook.mp3');
@@ -16,6 +19,8 @@ const rightcross = new Audio('audio/RightCross.mp3');
 const fight = new Audio('audio/Fight.mp3');
 const crowdapl = new Audio('audio/crowdapplause.mp3');
 const crowdboo = new Audio('audio/crowdboo.mp3');
+
+// Player selections
 
 rockbtn.addEventListener( "click" ,function() {
     let result = computerPlay('rock');
@@ -30,6 +35,8 @@ scissorsbtn.addEventListener( "click" ,function() {
     playerweapon.innerText = "scissors"
 })
 
+// Computers selections
+
 function computerPlay(playerSelection){
 let playes=['rock','paper','scissors'];
 let computerPlay = Math.floor(Math.random()*playes.length);
@@ -38,6 +45,9 @@ computerSelection = (playes[computerPlay]);
 computerweapon.innerText = computerSelection;
 gameRules(playerSelection,computerSelection);
 }
+
+// function to compare players selection and computers selection
+// To check who Wins.
 
 function gameRules(playerSelection,computerSelection){
 
@@ -75,6 +85,8 @@ if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
     health(pscore,cscore)
     gameEnd(pscore,cscore)
 }
+
+// Function to remove hearts based on the score
 
 function health(pscore,cscore){
     const phealth = document.getElementById('playerh');
@@ -125,6 +137,8 @@ function health(pscore,cscore){
     }
 }
 
+//To check if 5 turns of player/computer are over.
+
 function gameEnd(pscore,cscore){
     if(pscore == 5 || cscore == 5){
         wepnContr.style.display = "none"
@@ -141,6 +155,9 @@ function gameEnd(pscore,cscore){
         crowdboo.volume = 0.3;
     }
 }
+
+// start and restart button functions
+
  function gameRestart(){
     location.reload();
  }
