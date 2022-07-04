@@ -106,9 +106,6 @@ body{
 .hit{
     filter: grayscale(100%) sepia(74%) hue-rotate(316deg) saturate(822%) contrast(275%);
 }
-
-
-
 .weapon:hover{
     box-shadow: 6px 6px black;
 }
