@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a Street fighter inspired RPS game">
     <script async src="script.js"></script>
     <link rel="stylesheet" href="styles.css"/>
-    <title>Document</title>
+    <title>Rock-Paper-Scissors</title>
 </head>
 <body>
     <div class="wrapper">
@@ -15,7 +16,7 @@
         <h2 class="sub_text" id="subtext">>> Choose your weapon</h2>
         <div class="start" id="start_button">
             <button class="weapon" onclick="gameStart()">START</button>
-            </div>
+        </div>
         <div class="weapons_layout" id="weapon_container">
             <button id="rock" class="weapon">ROCK</button>
             <button id="paper" class="weapon">PAPER</button>
@@ -28,37 +29,37 @@
         <div class="lower_half">
             <div class="flex-container">
                 <div class="health" id="playerh">
-                    <img id="playerh1" src="assets/health.webp">
-                    <img id="playerh2" src="assets/health.webp">
-                    <img id="playerh3" src="assets/health.webp">
-                    <img id="playerh4" src="assets/health.webp">
-                    <img id="playerh5" src="assets/health.webp">
+                    <img id="playerh1" src="assets/health.webp" alt="heart">
+                    <img id="playerh2" src="assets/health.webp" alt="heart">
+                    <img id="playerh3" src="assets/health.webp" alt="heart">
+                    <img id="playerh4" src="assets/health.webp" alt="heart">
+                    <img id="playerh5" src="assets/health.webp" alt="heart">
                 </div>
                 <div class="player_char">
-                    <h4 class="char_name">You</h4>
+                    <p class="char_name">You</p>
                     <p class="char_name">^</p>
-                    <img id="ply_char" src="assets/fighter2.gif" height="300px" width="200px">
+                    <img id="ply_char" src="assets/fighter1.webp" alt="player character" height="300px" width="200px">
                 </div>
                 <div class="player_selection weapon_select">
-                    <h6 class="player_weapon" id="player1"></h6>
+                    <p class="player_weapon" id="player1"></p>
                 </div>
                 <div class="results">
-                    <h6 id="mainresult">VS</h6>
+                    <p id="mainresult">VS</p>
                 </div>
                 <div class="computer_selection weapon_select">
-                    <h6 class="computer_weapon" id="computer1"></h6>
+                    <p class="computer_weapon" id="computer1"></p>
                 </div>
                 <div class="computer_char">
-                    <h4 class="char_name">Enemy</h4>
+                    <p class="char_name">Enemy</p>
                     <p class="char_name">^</p>
-                    <img id="cmp_char" src="assets/fighter1.gif" height="300px" width="200px">
+                    <img id="cmp_char" src="assets/fighter2.webp" alt="Enemy character" height="300px" width="200px">
                 </div>
                 <div class="health" id="computerh">
-                    <img id="computerh1" src="assets/health.webp">
-                    <img id="computerh2" src="assets/health.webp">
-                    <img id="computerh3" src="assets/health.webp">
-                    <img id="computerh4" src="assets/health.webp">
-                    <img id="computerh5" src="assets/health.webp">
+                    <img id="computerh1" src="assets/health.webp" alt="heart">
+                    <img id="computerh2" src="assets/health.webp" alt="heart">
+                    <img id="computerh3" src="assets/health.webp" alt="heart">
+                    <img id="computerh4" src="assets/health.webp" alt="heart">
+                    <img id="computerh5" src="assets/health.webp" alt="heart">
                 </div>
             </div>
         </div>

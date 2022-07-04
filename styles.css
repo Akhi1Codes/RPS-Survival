@@ -18,7 +18,7 @@ body{
 .wrapper{
     height: 100vh;
     background-color: var(--black);
-    background-image: url(assets/back1.gif);
+    background-image: url(assets/back1.webp);
     background-position:center;
     background-repeat:no-repeat;
     background-size:auto;
@@ -88,8 +88,8 @@ body{
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 50px;
-    flex-basis: 6em;
+    font-size: 40px;
+    flex-basis: 8em;
 }
 .weapon_select{
     display: flex;
@@ -107,5 +107,5 @@ body{
     filter: grayscale(100%) sepia(74%) hue-rotate(316deg) saturate(822%) contrast(275%);
 }
 .weapon:hover{
-    box-shadow: 6px 6px black;
+    box-shadow: 6px 6px var(--black);
 }
