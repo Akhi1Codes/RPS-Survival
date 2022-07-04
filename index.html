@@ -12,16 +12,19 @@
     <div class="wrapper">
         <div class="upper_half">
         <h1 class="main_text">STREET FIGHT</h1>
-        <h2 class="sub_text">>> Choose your <span class="red">weapon</span></h2>
-        <div class="weapons_layout">
+        <h2 class="sub_text" id="subtext">>> Choose your weapon</h2>
+        <div class="weapons_layout" id="weapon_container">
             <button id="rock" class="weapon">ROCK</button>
             <button id="paper" class="weapon">PAPER</button>
             <button id="scissors" class="weapon">SCISSORS</button>
         </div>
+        <div class="restart" id="restart_button">
+        <button class="weapon" onclick="gameRestart()">RESTART</button>
+        </div>
         </div>
         <div class="lower_half">
             <div class="flex-container">
-                <div class="health">
+                <div class="health" id="playerh">
                     <img id="playerh1" src="assets/health.webp">
                     <img id="playerh2" src="assets/health.webp">
                     <img id="playerh3" src="assets/health.webp">
@@ -31,7 +34,7 @@
                 <div class="player_char">
                     <h4 class="char_name">You</h4>
                     <p class="char_name">^</p>
-                    <img src="assets/fighter2.gif" height="300px" width="200px">
+                    <img id="ply_char" src="assets/fighter2.gif" height="300px" width="200px">
                 </div>
                 <div class="player_selection weapon_select">
                     <h6 class="player_weapon" id="player1"></h6>
@@ -45,9 +48,9 @@
                 <div class="computer_char">
                     <h4 class="char_name">Enemy</h4>
                     <p class="char_name">^</p>
-                    <img src="assets/fighter1.gif" height="300px" width="200px">
+                    <img id="cmp_char" src="assets/fighter1.gif" height="300px" width="200px">
                 </div>
-                <div class="health">
+                <div class="health" id="computerh">
                     <img id="computerh1" src="assets/health.webp">
                     <img id="computerh2" src="assets/health.webp">
                     <img id="computerh3" src="assets/health.webp">
