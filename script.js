@@ -39,9 +39,8 @@ if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
     {
         score.innerText = "YOU WIN"
         playerscore++;
-        compchar.classList.add("hit")
-        setTimeout(5000)
-        compchar.classList.remove("hit")
+        compchar.classList.add("hit");
+        setTimeout(()=> {compchar.classList.remove("hit")},200)
         console.log(playerscore);
     }
     else if(playerSelection === computerSelection){
@@ -50,6 +49,8 @@ if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
     else {
         score.innerText = "YOU LOSE"
         computerscore++;
+        playerchar.classList.add("hit");
+        setTimeout(()=> {playerchar.classList.remove("hit")},200)
         console.log(computerscore);
     }
     let pscore = playerscore;
