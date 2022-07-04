@@ -11,6 +11,8 @@ const restartbtn = document.getElementById('restart_button');
 const finalresults = document.getElementById('subtext');
 const backmusic = new Audio('audio/backgroundmusic.mp3');
 const attack = new Audio('audio/attacks.mp3');
+const lefthook = new Audio('audio/LeftHook.mp3');
+const rightcross = new Audio('audio/RightCross.mp3');
 const fight = new Audio('audio/Fight.mp3');
 const crowdapl = new Audio('audio/crowdapplause.mp3');
 const crowdboo = new Audio('audio/crowdboo.mp3');
@@ -18,17 +20,14 @@ const crowdboo = new Audio('audio/crowdboo.mp3');
 rockbtn.addEventListener( "click" ,function() {
     let result = computerPlay('rock');
     playerweapon.innerText = "rock"
-    attack.play()
 })
 paperbtn.addEventListener( "click" ,function() {
     let result = computerPlay('paper');
     playerweapon.innerText = "paper"
-    attack.play()
 })
 scissorsbtn.addEventListener( "click" ,function() {
     let result = computerPlay('scissors');
     playerweapon.innerText = "scissors"
-    attack.play()
 })
 
 function computerPlay(playerSelection){
@@ -49,18 +48,24 @@ if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'scissors' && computerSelection == 'paper') ||
     (playerSelection == 'paper' && computerSelection == 'rock')) 
     {
-        score.innerText = "YOU WIN"
+        score.innerText = "YOU WIN";
+        lefthook.play()
+        lefthook.volume = 0.3;
         playerscore++;
         compchar.classList.add("hit");
         setTimeout(()=> {compchar.classList.remove("hit")},200)
         console.log(playerscore);
     }
     else if(playerSelection === computerSelection){
-        score.innerText = "TIE"
+        score.innerText = "TIE";
+        attack.play()
+        attack.volume = 0.3;
     }
     else {
-        score.innerText = "YOU LOSE"
+        score.innerText = "YOU LOSE";
         computerscore++;
+        rightcross.play()
+        rightcross.volume = 0.3;
         playerchar.classList.add("hit");
         setTimeout(()=> {playerchar.classList.remove("hit")},200)
         console.log(computerscore);
@@ -146,3 +151,4 @@ function gameEnd(pscore,cscore){
  }
  
  backmusic.play();
+ backmusic.volume = 0.7;
