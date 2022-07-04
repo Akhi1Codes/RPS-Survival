@@ -5,6 +5,9 @@ const paperbtn = document.getElementById('paper');
 const scissorsbtn = document.getElementById('scissors');
 const playerweapon = document.getElementById('player1');
 const score = document.getElementById('mainresult');
+const wepnContr = document.getElementById('weapon_container');
+const restartbtn = document.getElementById('restart_button');
+const finalresults = document.getElementById('subtext');
 
 rockbtn.addEventListener( "click" ,function() {
     let result = computerPlay('rock');
@@ -56,6 +59,7 @@ if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
     let pscore = playerscore;
     let cscore = computerscore;
     health(pscore,cscore)
+    gameEnd(pscore,cscore)
 }
 
 function health(pscore,cscore){
@@ -106,3 +110,19 @@ function health(pscore,cscore){
         phealth.style.display = "none"
     }
 }
+
+function gameEnd(pscore,cscore){
+    if(pscore == 5 || cscore == 5){
+        wepnContr.style.display = "none"
+        restartbtn.style.display = "block"
+    }
+    if(pscore == 5){
+        finalresults.innerText = "VICTORY"
+    }
+    if(cscore == 5){
+        finalresults.innerText = "A Bitter defeat TRY AGAIN!!!"
+    }
+}
+ function gameRestart(){
+    location.reload();
+ }
