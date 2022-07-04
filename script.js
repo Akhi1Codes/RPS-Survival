@@ -29,12 +29,19 @@ gameRules(playerSelection,computerSelection);
 }
 
 function gameRules(playerSelection,computerSelection){
+
+const playerchar = document.getElementById ('ply_char');
+const compchar = document.getElementById ('cmp_char');
+
 if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'scissors' && computerSelection == 'paper') ||
     (playerSelection == 'paper' && computerSelection == 'rock')) 
     {
         score.innerText = "YOU WIN"
         playerscore++;
+        compchar.classList.add("hit")
+        setTimeout(5000)
+        compchar.classList.remove("hit")
         console.log(playerscore);
     }
     else if(playerSelection === computerSelection){
@@ -51,11 +58,13 @@ if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
 }
 
 function health(pscore,cscore){
+    const phealth = document.getElementById('playerh');
     const phealth1 = document.getElementById('playerh1');
     const phealth2 = document.getElementById('playerh2');
     const phealth3 = document.getElementById('playerh3');
     const phealth4 = document.getElementById('playerh4');
     const phealth5 = document.getElementById('playerh5');
+    const chealth = document.getElementById('computerh');
     const chealth1 = document.getElementById('computerh1');
     const chealth2 = document.getElementById('computerh2');
     const chealth3 = document.getElementById('computerh3');
@@ -76,8 +85,10 @@ function health(pscore,cscore){
     }
     else if(pscore == 5){
         chealth5.style.display = "none";
+        chealth.style.display = "none"
     }
-    else if(cscore == 1){
+
+    if(cscore == 1){
         phealth1.style.display = "none";
     }
     else if(cscore == 2){
@@ -91,5 +102,6 @@ function health(pscore,cscore){
     }
     else if(cscore == 5){
         phealth5.style.display = "none";
+        phealth.style.display = "none"
     }
 }
