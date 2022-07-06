@@ -10,7 +10,7 @@
     <title>Rock-Paper-Scissors</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="container">
         <div class="upper_half">
         <h1 class="main_text">STREET FIGHT</h1>
         <h2 class="sub_text" id="subtext">>> Choose your weapon</h2>
@@ -38,7 +38,7 @@
                 <div class="player_char">
                     <p class="char_name">You</p>
                     <p class="char_name">^</p>
-                    <img id="ply_char" src="assets/fighter1.webp" alt="player character" height="300px" width="200px">
+                    <img id="ply_char" class="character" src="assets/fighter1.webp" alt="player character">
                 </div>
                 <div class="player_selection weapon_select">
                     <p class="player_weapon" id="player1"></p>
@@ -52,7 +52,7 @@
                 <div class="computer_char">
                     <p class="char_name">Enemy</p>
                     <p class="char_name">^</p>
-                    <img id="cmp_char" src="assets/fighter2.webp" alt="Enemy character" height="300px" width="200px">
+                    <img id="cmp_char" class="character" src="assets/fighter2.webp" alt="Enemy character">
                 </div>
                 <div class="health" id="computerh">
                     <img id="computerh1" src="assets/health.webp" alt="heart">
@@ -63,6 +63,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="warning">
+        <p class="warning_text">Please use landscape mode to view this website</p>
     </div>
 </body>
 </html>
