@@ -20,7 +20,7 @@ body{
     background-image: url(assets/back1.webp);
     background-position:center;
     background-repeat:no-repeat;
-    background-size:auto;
+    background-size:cover;
 }
 .main_text{
     color: white;
@@ -45,7 +45,7 @@ body{
     border-style: none;
     padding: 0.8rem;
     font-family:inherit;
-    font-size:clamp(0.5em,2.5vh,4rem);
+    font-size:clamp(0.5em,2.5vh,2rem);
     width: 10rem;
     background-color: var(--color_light);
     box-shadow: 2px 2px black;
@@ -64,7 +64,7 @@ body{
     display:none;
 }
 .flex-container{
-    margin: 6.5rem 0 0 0;
+    margin: 7% 0 0 0;
     display: flex;
     justify-content: space-evenly;
 }
@@ -149,7 +149,7 @@ body{
         min-width: 100%;
         top: 0;
         left: 0;
-        background-color:var(--white)
+        background-color:var(--white);
     }
     .warning_text{
         text-align: center;
