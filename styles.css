@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 *{
     padding: 0%;
     margin:0%;
@@ -26,14 +25,14 @@ body{
 .main_text{
     color: white;
     text-align: center;
-    font-size: 4rem;
+    font-size: clamp(1rem,10vh,4rem);
     padding-top: 0.2em;
     text-shadow: 3px 3px var(--black)
 }
 .sub_text{
     color: white;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: clamp(1rem,4vh,4rem);
     padding-top: 0.3em;
     text-shadow: 3px 3px var(--black);
 }
@@ -46,7 +45,7 @@ body{
     border-style: none;
     padding: 0.8rem;
     font-family:inherit;
-    font-size:medium;
+    font-size:clamp(0.5em,2.5vh,4rem);
     width: 10rem;
     background-color: var(--color_light);
     box-shadow: 2px 2px black;
@@ -57,7 +56,7 @@ body{
 }
 .start{
     text-align: center;
-    padding: 1.5em 0 0 0;
+    padding: 2em 0 0 0;
 }
 .restart{
     text-align: center;
@@ -83,12 +82,17 @@ body{
     text-align: center;
     color: var(--white);
 }
+.character{
+    height:300px; 
+    width:200px;
+}
 .results{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     color: var(--white);
-    font-size: 40px;
+    font-size:clamp(1rem,5vh,3rem);
     flex-basis: 8em;
 }
 .weapon_select{
@@ -100,7 +104,7 @@ body{
 }
 .player_weapon,
 .computer_weapon{
-    font-size: 20px;
+    font-size:clamp(1rem,3vh,4rem);
     text-transform: uppercase;
 }
 .hit{
@@ -109,3 +113,46 @@ body{
 .weapon:hover{
     box-shadow: 6px 6px var(--black);
 }
+.warning{
+    display: none;
+}
+
+@media screen and (orientation: landscape) and (max-width: 950px){
+    .wrapper{
+        background-position:cover;
+    }
+    .start,.weapons_layout,.restart{
+        padding: 0.5em 0 0 0;
+    }
+    .weapon{
+        padding: 0.8em;
+    }
+    .flex-container{
+        margin-top:3%;
+    }
+    .character{
+        height:200px; 
+        width:120px;
+    }
+    .health{
+        max-width: 30px;
+    }
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 450px){
+    .warning{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        min-height: 100%;
+        min-width: 100%;
+        top: 0;
+        left: 0;
+        background-color:var(--white)
+    }
+    .warning_text{
+        text-align: center;
+        max-width: 60%;
+    }
+  }
