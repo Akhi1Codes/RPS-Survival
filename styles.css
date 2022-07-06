@@ -118,6 +118,9 @@ body{
 }
 
 @media screen and (orientation: landscape) and (max-width: 950px){
+    .body{
+        overflow: auto;
+    }
     .wrapper{
         background-position:cover;
     }
