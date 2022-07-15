@@ -165,7 +165,6 @@ function gameEnd(pscore,cscore){
     wepnContr.style.display = "block"
     startbtn.style.display = "none"
     fight.play()
+    backmusic.play();
+    backmusic.volume = 0.7;
  }
- 
- backmusic.play();
- backmusic.volume = 0.7;
