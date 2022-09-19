@@ -17,7 +17,11 @@ The rules are very simple and probably you remember them from your childhood:
 Live Link : https://ar-akhil.github.io/RPS-game
 ## Screenshots
 
+Desktop Version
+
 ![Desktop Version](https://github.com/Ar-Akhil/RPS-game/blob/master/assets/desktop-version.png)
+
+Mobile Version
 
 ![Mobile Version](https://github.com/Ar-Akhil/RPS-game/blob/master/assets/mobile-version.png)
 
