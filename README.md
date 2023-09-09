@@ -14,7 +14,7 @@ The rules are very simple and probably you remember them from your childhood:
     If you choose Paper, you will win against Rock but lose against Scissors.
 
 
-Live Link : https://ar-akhil.github.io/RPS-game
+Live Link : https://ar-akhil.github.io/RPS-Survival/
 ## Screenshots
 
 Desktop Version
